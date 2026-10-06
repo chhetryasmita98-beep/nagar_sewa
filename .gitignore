@@ -1,0 +1,16 @@
+# Uploaded files
+uploads/documents/*
+uploads/certificates/*
+
+# Keep upload folders
+!uploads/documents/.gitkeep
+!uploads/certificates/.gitkeep
+
+# Environment files
+.env
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db

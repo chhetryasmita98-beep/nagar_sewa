@@ -1,0 +1,834 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   PAGE LAYOUT
+========================================================= */
+
+.page-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 250px;
+
+    background: #172554;
+
+    color: white;
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    padding: 25px 15px;
+
+    overflow-y: auto;
+
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 10px 30px;
+}
+
+.logo-icon {
+    width: 45px;
+    height: 45px;
+
+    background: white;
+
+    color: #172554;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 24px;
+
+    flex-shrink: 0;
+}
+
+.logo h2 {
+    font-size: 20px;
+}
+
+.logo span {
+    display: block;
+
+    color: #cbd5e1;
+
+    font-size: 12px;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+========================================================= */
+
+.sidebar-menu {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.sidebar-menu a {
+    color: #dbeafe;
+
+    text-decoration: none;
+
+    padding: 13px 15px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    background: #1e3a8a;
+
+    color: white;
+}
+
+.sidebar-menu a.logout-link {
+    margin-top: 20px;
+
+    color: #fecaca;
+}
+
+.sidebar-menu a.logout-link:hover {
+    background: #991b1b;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    margin-left: 250px;
+
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   TOP HEADER
+========================================================= */
+
+.top-header {
+    min-height: 85px;
+
+    background: white;
+
+    padding: 20px 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    gap: 20px;
+}
+
+.top-header h1 {
+    color: #111827;
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+}
+
+.top-header p {
+    color: #6b7280;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   USER INFORMATION
+========================================================= */
+
+.user-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+.user-info strong {
+    display: block;
+
+    color: #111827;
+
+    font-size: 14px;
+}
+
+.user-info small {
+    display: block;
+
+    color: #6b7280;
+
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+    padding: 30px 35px;
+}
+
+
+/* =========================================================
+   PAGE INTRO
+========================================================= */
+
+.page-intro {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 22px 25px;
+
+    margin-bottom: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.page-intro h2 {
+    color: #111827;
+
+    font-size: 20px;
+
+    margin-bottom: 6px;
+}
+
+.page-intro p {
+    color: #6b7280;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SERVICE COUNT
+========================================================= */
+
+.service-count {
+    background: #eff6ff;
+
+    border: 1px solid #dbeafe;
+
+    border-radius: 10px;
+
+    padding: 10px 18px;
+
+    text-align: center;
+
+    min-width: 120px;
+}
+
+.service-count strong {
+    display: block;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    margin-bottom: 2px;
+}
+
+.service-count span {
+    color: #64748b;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   SERVICES GRID
+========================================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.service-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 2px 8px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   SERVICE CARD TOP
+========================================================= */
+
+.service-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+
+    background: #eff6ff;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+}
+
+.active-badge {
+    background: #dcfce7;
+
+    color: #15803d;
+
+    border-radius: 20px;
+
+    padding: 5px 10px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   SERVICE TITLE
+========================================================= */
+
+.service-card h3 {
+    color: #111827;
+
+    font-size: 18px;
+
+    margin-bottom: 8px;
+}
+
+.service-description {
+    color: #6b7280;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    min-height: 42px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   REQUIRED DOCUMENTS
+========================================================= */
+
+.documents-section {
+    background: #f8fafc;
+
+    border: 1px solid #eef0f3;
+
+    border-radius: 8px;
+
+    padding: 15px;
+
+    margin-bottom: 20px;
+}
+
+.documents-section strong {
+    display: block;
+
+    color: #374151;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+}
+
+.documents-section ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.documents-section li {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 7px;
+
+    color: #6b7280;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+.documents-section li span {
+    color: #16a34a;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.apply-button {
+    width: 100%;
+
+    background: #2563eb;
+
+    color: white;
+
+    border-radius: 7px;
+
+    padding: 12px 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.apply-button span {
+    font-size: 17px;
+
+    transition: 0.2s ease;
+}
+
+.apply-button:hover {
+    background: #1d4ed8;
+}
+
+.apply-button:hover span {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   HELP CARD
+========================================================= */
+
+.help-card {
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 12px;
+
+    padding: 20px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.help-icon {
+    width: 45px;
+    height: 45px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    flex-shrink: 0;
+}
+
+.help-content {
+    flex: 1;
+}
+
+.help-content h3 {
+    color: #1e3a8a;
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+.help-content p {
+    color: #475569;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.help-button {
+    background: #2563eb;
+
+    color: white;
+
+    padding: 10px 15px;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.help-button:hover {
+    background: #1d4ed8;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+
+    background: #eff6ff;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 15px;
+
+    font-size: 27px;
+}
+
+.empty-state h3 {
+    color: #374151;
+
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+.empty-state p {
+    color: #9ca3af;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 25px 8px;
+    }
+
+    .logo {
+        justify-content: center;
+
+        padding: 5px 0 30px;
+    }
+
+    .logo>div:last-child {
+        display: none;
+    }
+
+    .logo-icon {
+        width: 40px;
+        height: 40px;
+
+        font-size: 20px;
+    }
+
+    .sidebar-menu {
+        gap: 7px;
+    }
+
+    .sidebar-menu a {
+        justify-content: center;
+
+        padding: 13px 8px;
+    }
+
+    .sidebar-menu a span:last-child {
+        display: none;
+    }
+
+    .main-content {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+    }
+
+    .top-header {
+        padding: 18px 20px;
+    }
+
+    .top-header h1 {
+        font-size: 21px;
+    }
+
+    .top-header p {
+        font-size: 12px;
+    }
+
+    .user-info>div:last-child {
+        display: none;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    .page-intro {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .service-count {
+        width: 100%;
+    }
+
+    .help-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .help-content {
+        min-width: 200px;
+    }
+
+    .help-button {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .top-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .user-info {
+        align-self: flex-end;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .page-intro {
+        padding: 18px;
+    }
+
+    .help-card {
+        padding: 18px;
+    }
+
+}
